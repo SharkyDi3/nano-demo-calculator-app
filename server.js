@@ -15,10 +15,10 @@ baseRouter.get('/greeting', (req, res) => {
 
 baseRouter.post('/add', (req, res) => {
     const { num1, num2 } = req.body;
-    let result = {};
+    let result = 0;
     if(num1 > 0 && num2 > 0) {    
         result = num1 + num2;
-    }
+    } else result = null;
     res.json({ result: result });
 });
 
